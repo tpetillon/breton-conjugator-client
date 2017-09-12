@@ -7,6 +7,7 @@ const queryString = require('query-string');
 $("body").append(require('html!./main.html'));
 
 const $resultDiv = $('#conjugation-results');
+const $typeDiv = $('#conjugation-type');
 const $errorDiv = $('#conjugation-error');
 
 const tenses = {
@@ -36,14 +37,18 @@ function clearError() {
     $errorDiv.hide();
 }
 
+function clearConjugation() {
+    $resultDiv.empty();
+    $typeDiv.empty();
+}
+
 function clear() {
     clearError();
-
-    $resultDiv.empty();
+    clearConjugation();
 }
 
 function displayConjugation(conjugation) {
-    $resultDiv.empty();
+    clearConjugation();
 
     $resultDiv.append($('<p/>').text('Conjugation of “' + conjugation.forms.infinitive + '”:'));
 
@@ -72,6 +77,16 @@ function displayConjugation(conjugation) {
     }
 
     $resultDiv.append($list);
+
+    $typeDiv.append($('<p/>').text('Conjugation type:'));
+
+    var $typeList = $('<ul/>');
+    for (var i = 0; i < conjugation.type.length; i++) {
+        var $entry = $('<li/>').text(conjugation.type[i]);
+        $typeList.append($entry);
+    }
+    
+    $typeDiv.append($typeList);
 }
 
 function conjugate(verb, pushState) {
@@ -111,7 +126,7 @@ function init() {
         conjugate(submittedVerb, true);
         return false;
     });
-    
+
     var query = queryString.parse(window.location.search);
     if (query && query.verb) {
         conjugate(query.verb, true);
