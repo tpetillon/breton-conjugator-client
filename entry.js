@@ -40,7 +40,10 @@ function clearError() {
 
 function clearConjugation() {
     $resultDiv.empty();
+    $resultDiv.hide();
+    
     $typeDiv.empty();
+    $typeDiv.hide();
 }
 
 function clear() {
@@ -82,6 +85,8 @@ function displayConjugation(conjugation) {
     }
 
     $resultDiv.append($list);
+    
+    $resultDiv.show();
 
     $typeDiv.append($('<p id="conjugation-type-title"/>').text('Conjugation type'));
 
@@ -92,6 +97,8 @@ function displayConjugation(conjugation) {
     }
     
     $typeDiv.append($typeList);
+    
+    $typeDiv.show();
 }
 
 function conjugate(verb, pushState) {
