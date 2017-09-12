@@ -1,0 +1,61 @@
+* {
+    font-family: sans-serif;
+}
+
+#conjugation-error {
+    padding: 1em;
+    background-color: #cc2233;
+    color: #ffffff;
+    text-align: center;
+    width: 33%;
+}
+
+#conjugation-results {
+    padding: 1em;
+}
+
+#conjugation-title {
+    margin: 0;
+    padding: 0;
+}
+
+#tense-list {
+    margin-top: 0;
+    list-style: none;
+}
+
+#tense-list > li {
+    padding-top: 1em;
+    /*display: inline-block;*/
+}
+
+.form-list {
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 2em;
+    list-style: none;
+}
+
+.form-list th {
+    color: #888888;
+    font-weight: normal;
+    padding-right: 0.5em;
+}
+
+.form-list td {
+    font-weight: 500;
+}
+
+#conjugation-type {
+    padding: 1em;
+    padding-top: 0;
+}
+
+#conjugation-type-title {
+    margin-bottom: 0;
+}
+
+#conjugation-type-list {
+    margin-top: 0;
+    /*list-style: none;*/
+}

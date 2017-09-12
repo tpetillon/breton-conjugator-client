@@ -4,9 +4,11 @@
   "description": "Breton language conjugation client",
   "main": "bundle.js",
   "dependencies": {
+    "css-loader": "^0.23.1",
     "html-loader": "^0.4.3",
     "jquery": "^3.1.0",
-    "query-string": "^5.0.0"
+    "query-string": "^5.0.0",
+    "style-loader": "^0.13.1"
   },
   "devDependencies": {
     "expose-loader": "^0.7.1",
