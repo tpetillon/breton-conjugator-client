@@ -19,6 +19,10 @@
     "build": "webpack --progress --colors --devtool source-map webpack.config.js",
     "watch": "webpack --progress --colors --watch --devtool source-map --config webpack.config.js"
   },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/tpetillon/breton-conjugator-client.git"
+  },
   "author": "Thomas Petillon <tpetillon@gmail.com>",
   "license": "MIT"
 }
