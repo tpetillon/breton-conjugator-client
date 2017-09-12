@@ -1,0 +1,24 @@
+{
+  "name": "breton-conjugator-client",
+  "version": "0.0.1",
+  "description": "Breton language conjugation client",
+  "main": "bundle.js",
+  "dependencies": {
+    "html-loader": "^0.4.3",
+    "jquery": "^3.1.0",
+    "query-string": "^5.0.0"
+  },
+  "devDependencies": {
+    "expose-loader": "^0.7.1",
+    "html-webpack-plugin": "^2.24.1",
+    "webpack": "^1.9.0",
+    "webpack-config": "^6.0.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --progress --colors --devtool source-map --config webpack.config.js",
+    "build": "webpack --progress --colors --devtool source-map webpack.config.js",
+    "watch": "webpack --progress --colors --watch --devtool source-map --config webpack.config.js"
+  },
+  "author": "Thomas Petillon <tpetillon@gmail.com>",
+  "license": "MIT"
+}
