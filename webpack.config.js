@@ -22,7 +22,7 @@ module.exports = new Config().merge({
             BRETON_CONJUGATOR_CLIENT_VERSION : JSON.stringify(require("./package.json").version)
         }),
         new HtmlWebpackPlugin({
-            title: 'Breton conjugator client'
+            title: 'Breton conjugator'
         })
     ]
 });

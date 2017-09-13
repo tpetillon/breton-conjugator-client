@@ -10,7 +10,13 @@ a:hover {
     text-decoration: underline;
 }
 
+#verb-form p {
+    display: inline;
+    padding-right: 2em;
+}
+
 #conjugation-error {
+    margin: 1em;
     padding: 1em;
     background-color: #cc2233;
     color: #ffffff;
@@ -66,4 +72,8 @@ a:hover {
 #conjugation-type-list {
     margin-top: 0;
     /*list-style: none;*/
+}
+
+footer {
+    margin-top: 3em;
 }
