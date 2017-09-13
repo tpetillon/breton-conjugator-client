@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = new Config().merge({
     entry: "./entry.js",
     output: {
-        path: __dirname + "/../build",
+        path: __dirname + "/../../build",
         filename: "bundle.js"
     },
     module: {
@@ -19,7 +19,7 @@ module.exports = new Config().merge({
     },
     plugins: [
         new webpack.DefinePlugin({
-            BRETON_CONJUGATOR_CLIENT_VERSION : JSON.stringify(require("./package.json").version)
+            BRETON_CONJUGATOR_CLIENT_VERSION : JSON.stringify(require("../package.json").version)
         }),
         new HtmlWebpackPlugin({
             title: 'Breton conjugator'

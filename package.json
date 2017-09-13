@@ -17,9 +17,12 @@
     "webpack-config": "^6.0.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --progress --colors --devtool source-map --config webpack.config.js",
-    "build": "webpack --progress --colors --devtool source-map webpack.config.js",
-    "watch": "webpack --progress --colors --watch --devtool source-map --config webpack.config.js"
+    "start": "webpack-dev-server --progress --colors --config conf/webpack.prod.config.js",
+    "start-dev": "webpack-dev-server --progress --colors --config conf/webpack.dev.config.js",
+    "build": "webpack --progress --colors --config conf/webpack.prod.config.js",
+    "build-dev": "webpack --progress --colors --config conf/webpack.dev.config.js",
+    "watch": "webpack --progress --colors --watch --config conf/webpack.prod.config.js",
+    "watch-dev": "webpack --progress --colors --watch --config conf/webpack.dev.config.js"
   },
   "repository": {
     "type": "git",
